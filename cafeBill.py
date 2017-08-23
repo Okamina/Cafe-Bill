@@ -30,27 +30,31 @@ def order():
       return
     elif order_continue.upper() == "Y":
       order = str(input("Add to order: \n1. Essperso 5$\n2. Cappuccino 7$\n3. Latte 10$\n4. Sacher Cake 15$ \n5. Cheesscake 10$\n6. Appelcake 12$\n"))
-      amount = int(input("Amount of product: "))
-      if order == "1":
-        meal = meal + 5 * amount
-        order_list.append("Essperso  5$ * %d" % amount)
-      elif order =="2":
-        meal = meal + 7 * amount
-        order_list.append("Cappuccino 7$ * %d" % amount)
-      elif order =="3":
-        meal = meal + 10 * amount
-        order_list.append("Latte 10$ * %d" % amount)
-      elif order =="4":
-        meal = meal + 15 * amount
-        order_list.append("Sacher Cake 15$ * %d" % amount)
-      elif order =="5":
-        meal = meal + 10 * amount
-        order_list.append("Cheesscake 10$ * %d" % amount)
-      elif order =="6":
-        meal = meal + 12 * amount
-        order_list.append("Appelcake 12$ * %d" % amount)
+      amount = input("Amount of product: ")
+      if not amount.isdigit():
+        print ("Error. Invalid value")
       else:
-        print ("Error. There is no such option")
+        amount = int(amount)
+        if order == "1":
+          meal = meal + 5 * amount
+          order_list.append("Essperso  5$ * %d" % amount)
+        elif order =="2":
+          meal = meal + 7 * amount
+          order_list.append("Cappuccino 7$ * %d" % amount)
+        elif order =="3":
+          meal = meal + 10 * amount
+          order_list.append("Latte 10$ * %d" % amount)
+        elif order =="4":
+          meal = meal + 15 * amount
+          order_list.append("Sacher Cake 15$ * %d" % amount)
+        elif order =="5":
+          meal = meal + 10 * amount
+          order_list.append("Cheesscake 10$ * %d" % amount)
+        elif order =="6":
+          meal = meal + 12 * amount
+          order_list.append("Appelcake 12$ * %d" % amount)
+        else:
+          print ("Error. There is no such option")
     else:
       print ("Error. There is no such option")
 	
