@@ -2,8 +2,7 @@
 prints the order list, 
 calculates the bill: 
 total net cost, tax, tip and the total amount to be paid
-
-List TODO: add chceking if amount is int"""
+"""
 
 def order():
   meal = 0
